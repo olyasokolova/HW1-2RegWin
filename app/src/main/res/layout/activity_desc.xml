@@ -6,9 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".DescActivity">
     <TextView
-        android:id="@+id/textDesc"
+        android:padding="8dp"
+        android:id="@+id/tvTitle"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         />
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <TextView
+        android:padding="16dp"
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
 
 </LinearLayout>

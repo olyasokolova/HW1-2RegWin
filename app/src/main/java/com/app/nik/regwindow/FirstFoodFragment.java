@@ -1,6 +1,7 @@
 package com.app.nik.regwindow;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.app.nik.regwindow.repositorii.Repository;
 
 
 public class FirstFoodFragment extends ListFragment {
@@ -29,20 +32,10 @@ public class FirstFoodFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        switch (position){
-            case 0:
-                Toast.makeText(this.getContext(),String.valueOf(position),Toast.LENGTH_LONG).show();
-                break;
-            case 1:
-                Toast.makeText(this.getContext(),String.valueOf(position),Toast.LENGTH_LONG).show();
-                break;
-            case 2:
-                Toast.makeText(this.getContext(),String.valueOf(position),Toast.LENGTH_LONG).show();
-                break;
-            case 3:
-                Toast.makeText(this.getContext(),String.valueOf(position),Toast.LENGTH_LONG).show();
-                break;
-        }
+        Intent intent = new Intent(getContext(),DescActivity.class);
+        intent.putExtra(Repository.EXTRA_TITLE,Repository.getTitle(position,this.getContext()));
+        intent.putExtra(Repository.EXTRA_DESC,Repository.getDescs(position,this.getContext()));
+        intent.putExtra(Repository.EXTRA_PIC,Repository.getPics(position,this.getContext()));
 
-    }
+        }
 }
