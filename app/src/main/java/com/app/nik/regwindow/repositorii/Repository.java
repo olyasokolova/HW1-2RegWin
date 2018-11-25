@@ -36,7 +36,7 @@ public class Repository {
     }
 
     public static int getPics(int position, Context context){
-        if(titles.size()==0)
+        if(pics.size()==0)
             initializePics(context);
         return pics.get(position);
     }

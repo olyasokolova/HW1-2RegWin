@@ -36,6 +36,7 @@ public class FirstFoodFragment extends ListFragment {
         intent.putExtra(Repository.EXTRA_TITLE,Repository.getTitle(position,this.getContext()));
         intent.putExtra(Repository.EXTRA_DESC,Repository.getDescs(position,this.getContext()));
         intent.putExtra(Repository.EXTRA_PIC,Repository.getPics(position,this.getContext()));
+        startActivity(intent);
 
         }
 }

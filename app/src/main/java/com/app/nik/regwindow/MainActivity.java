@@ -149,18 +149,18 @@ public class MainActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if(
-                        !frstName.isEmpty()&&!srnName.isEmpty()&&!postNum.isEmpty()&&!phoneNum.isEmpty()&&!age.isEmpty()&&(male.isChecked()||fem.isChecked())&&phoneNum.length()<=10&&postNum.contains("@")
-                        )
-                {
-                    Toast.makeText(MainActivity.this,"Вы зарегистрировались",Toast.LENGTH_LONG).show();
+              // if(
+                       // !frstName.isEmpty()&&!srnName.isEmpty()&&!postNum.isEmpty()&&!phoneNum.isEmpty()&&!age.isEmpty()&&(male.isChecked()||fem.isChecked())&&phoneNum.length()<=10&&postNum.contains("@")
+                       //// )
+                ///{
+                   // Toast.makeText(MainActivity.this,"Вы зарегистрировались",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
                 startActivity(intent);
-                }
+                //}
 
-                 else
-                {Toast.makeText(MainActivity.this,"Не все поля заполнены правильно",Toast.LENGTH_LONG).show();
-               }
+                 //////else
+               //// {Toast.makeText(MainActivity.this,"Не все поля заполнены правильно",Toast.LENGTH_LONG).show();
+               //}
 
 
 
